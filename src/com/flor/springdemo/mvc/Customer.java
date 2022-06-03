@@ -14,13 +14,25 @@ public class Customer {
 	@Size(min=3, message= "is required")
 	private String lastName; 
 	
+	@NotNull(message= "is required")	
 	@Min(value=1, message="Debe ser mayor a 0")
 	@Max(value=10, message="Debe ser menor a 10")
-	private int freePasses;
+	private Integer freePasses;
 	
-
+	@Pattern(regexp="^[a-zA-Z0-9]{5}", message="Solo 5 dígitos")
 	private String postalCode;
 	
+	
+	private String CourseCode;
+	
+
+	public String getCourseCode() {
+		return CourseCode;
+	}
+
+	public void setCourseCode(String courseCode) {
+		CourseCode = courseCode;
+	}
 
 	public String getPostalCode() {
 		return postalCode;
@@ -30,11 +42,11 @@ public class Customer {
 		this.postalCode = postalCode;
 	}
 
-	public int getFreePasses() {
+	public Integer getFreePasses() {
 		return freePasses;
 	}
 
-	public void setFreePasses(int freePasses) {
+	public void setFreePasses(Integer freePasses) {
 		this.freePasses = freePasses;
 	}
 

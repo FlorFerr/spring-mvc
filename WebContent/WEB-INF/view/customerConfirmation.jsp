@@ -8,6 +8,5 @@
 		<p>${customer.lastName}</p>
 		<p>${customer.freePasses}</p>
 		<p>${customer.postalCode}</p>
-		
 	</body>
 </html>
